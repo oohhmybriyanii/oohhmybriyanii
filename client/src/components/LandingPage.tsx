@@ -42,8 +42,7 @@ export default function LandingPage() {
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center py-4">
                         <div className="flex items-center gap-2 font-serif font-bold text-2xl animate-in fade-in slide-in-from-left duration-600">
-                            <span className="text-4xl animate-bounce-subtle">🍛</span>
-                            <span>OH MY BIRYANI</span>
+                            <img src="/logo.jpg" alt="OH MY BIRYANI" className="h-12 w-auto object-contain" />
                         </div>
 
                         <ul className="hidden md:flex gap-8 items-center">
@@ -51,11 +50,11 @@ export default function LandingPage() {
                                 <li key={item}>
                                     <button
                                         onClick={() => scrollToSection(item)}
-                                        className={`capitalize font-medium transition-all relative group ${activeSection === item ? 'text-black' : 'text-gray-600 hover:text-black'
+                                        className={`capitalize font-medium transition-all relative group bg-transparent ${activeSection === item ? 'text-orange-600' : 'text-gray-600 hover:text-orange-600'
                                             }`}
                                     >
                                         {item}
-                                        <span className={`absolute -bottom-1 left-0 h-0.5 bg-black transition-all ${activeSection === item ? 'w-full' : 'w-0 group-hover:w-full'
+                                        <span className={`absolute -bottom-1 left-0 h-0.5 bg-orange-600 transition-all ${activeSection === item ? 'w-full' : 'w-0 group-hover:w-full'
                                             }`}></span>
                                     </button>
                                 </li>
@@ -63,16 +62,16 @@ export default function LandingPage() {
                             <li>
                                 <button
                                     onClick={() => scrollToSection('order')}
-                                    className="bg-black text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-all hover:-translate-y-0.5 hover:shadow-lg relative overflow-hidden group"
+                                    className="bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-all hover:-translate-y-0.5 hover:shadow-lg relative overflow-hidden group"
                                 >
                                     <span className="relative z-10">Order Now</span>
-                                    <span className="absolute inset-0 bg-gray-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                                    <span className="absolute inset-0 bg-orange-800 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                                 </button>
                             </li>
                         </ul>
 
                         <button
-                            className="md:hidden"
+                            className="md:hidden bg-transparent"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
                             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -88,7 +87,7 @@ export default function LandingPage() {
                                 <li key={item}>
                                     <button
                                         onClick={() => scrollToSection(item)}
-                                        className="capitalize font-medium text-gray-600 hover:text-black transition-colors"
+                                        className="capitalize font-medium text-gray-600 hover:text-orange-600 transition-colors bg-transparent"
                                     >
                                         {item === 'order' ? 'Order Now' : item}
                                     </button>
@@ -121,13 +120,13 @@ export default function LandingPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
                         <div className="space-y-6 animate-in fade-in slide-in-from-left duration-800">
-                            <div className="inline-block bg-black text-white px-6 py-2 rounded-full text-sm font-semibold animate-in slide-in-from-right duration-600">
+                            <div className="inline-block bg-orange-100 text-orange-800 px-6 py-2 rounded-full text-sm font-semibold animate-in slide-in-from-right duration-600">
                                 <span>🔥 Authentic Arcot Style</span>
                             </div>
 
                             <h1 className="font-serif text-5xl md:text-7xl font-black leading-tight animate-in fade-in slide-in-from-bottom duration-800 delay-200">
                                 Traditional<br />
-                                <span className="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
+                                <span className="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
                                     Firewood Biryani
                                 </span>
                             </h1>
@@ -140,13 +139,13 @@ export default function LandingPage() {
                             <div className="flex gap-4 animate-in fade-in slide-in-from-bottom duration-800 delay-600">
                                 <button
                                     onClick={() => scrollToSection('order')}
-                                    className="bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all hover:-translate-y-1 hover:shadow-xl"
+                                    className="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-all hover:-translate-y-1 hover:shadow-xl"
                                 >
                                     Order Now
                                 </button>
                                 <button
                                     onClick={() => scrollToSection('menu')}
-                                    className="border-2 border-black text-black px-8 py-4 rounded-lg font-semibold hover:bg-black hover:text-white transition-all hover:-translate-y-1"
+                                    className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-all hover:-translate-y-1 bg-transparent"
                                 >
                                     View Menu
                                 </button>
@@ -168,7 +167,7 @@ export default function LandingPage() {
 
                         <div className="flex justify-center animate-in fade-in zoom-in duration-1000 delay-300">
                             <div className="relative">
-                                <div className="w-[400px] h-[400px] rounded-full bg-gradient-to-br from-gray-800 to-black shadow-2xl flex items-center justify-center animate-pulse-slow">
+                                <div className="w-[400px] h-[400px] rounded-full bg-gradient-to-br from-orange-500 to-red-600 shadow-2xl flex items-center justify-center animate-pulse-slow">
                                     <svg
                                         viewBox="0 0 100 100"
                                         className="w-48 h-48 text-white"
@@ -215,20 +214,20 @@ export default function LandingPage() {
                             <div
                                 key={dish.name}
                                 className={`group relative rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${dish.featured
-                                        ? 'bg-gradient-to-br from-gray-800 to-black text-white'
-                                        : 'border-2 border-gray-200 hover:border-black'
+                                    ? 'bg-gradient-to-br from-orange-500 to-red-600 text-white'
+                                    : 'border-2 border-gray-200 hover:border-orange-500'
                                     } animate-in fade-in slide-in-from-bottom duration-600`}
                                 style={{ animationDelay: `${index * 100}ms` }}
                             >
                                 {dish.featured && (
-                                    <div className="absolute top-5 right-5 bg-white text-black px-3 py-1 rounded-full text-xs font-bold uppercase">
+                                    <div className="absolute top-5 right-5 bg-white text-orange-600 px-3 py-1 rounded-full text-xs font-bold uppercase">
                                         Most Popular
                                     </div>
                                 )}
 
-                                <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center transition-transform group-hover:rotate-[360deg] duration-700 ${dish.featured ? 'bg-white' : 'bg-black'
+                                <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center transition-transform group-hover:rotate-[360deg] duration-700 ${dish.featured ? 'bg-white' : 'bg-orange-100'
                                     }`}>
-                                    <svg viewBox="0 0 100 100" className={`w-12 h-12 ${dish.featured ? 'text-black' : 'text-white'}`} fill="currentColor">
+                                    <svg viewBox="0 0 100 100" className={`w-12 h-12 ${dish.featured ? 'text-orange-600' : 'text-orange-600'}`} fill="currentColor">
                                         <path d="M35 30H45V70H35V30Z" />
                                         <path d="M55 30H65V70H55V30Z" />
                                         <circle cx="40" cy="25" r="5" />
@@ -236,18 +235,18 @@ export default function LandingPage() {
                                     </svg>
                                 </div>
 
-                                <h3 className={`text-2xl font-serif font-bold mb-3 ${dish.featured ? 'text-white' : 'text-black'}`}>
+                                <h3 className={`text-2xl font-serif font-bold mb-3 ${dish.featured ? 'text-white' : 'text-gray-900'}`}>
                                     {dish.name}
                                 </h3>
-                                <p className={`mb-4 ${dish.featured ? 'text-gray-300' : 'text-gray-600'}`}>
+                                <p className={`mb-4 ${dish.featured ? 'text-orange-50' : 'text-gray-600'}`}>
                                     {dish.description}
                                 </p>
-                                <div className={`text-3xl font-bold mb-6 ${dish.featured ? 'text-white' : 'text-black'}`}>
+                                <div className={`text-3xl font-bold mb-6 ${dish.featured ? 'text-white' : 'text-orange-600'}`}>
                                     ₹{dish.price}
                                 </div>
                                 <button className={`w-full py-3 rounded-lg font-semibold transition-all ${dish.featured
-                                        ? 'bg-white text-black hover:bg-gray-100'
-                                        : 'border-2 border-black hover:bg-black hover:text-white'
+                                    ? 'bg-white text-orange-600 hover:bg-orange-50'
+                                    : 'border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent'
                                     }`}>
                                     Add to Cart
                                 </button>
@@ -263,7 +262,7 @@ export default function LandingPage() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="flex justify-center">
                             <div className="relative">
-                                <div className="w-[400px] h-[400px] rounded-full bg-gradient-to-br from-black to-gray-700 shadow-2xl flex items-center justify-center animate-rotate-slow">
+                                <div className="w-[400px] h-[400px] rounded-full bg-gradient-to-br from-orange-600 to-red-800 shadow-2xl flex items-center justify-center animate-rotate-slow">
                                     <div className="grid grid-cols-2 gap-8 text-white text-center animate-rotate-reverse-slow">
                                         <div>
                                             <div className="text-5xl font-serif font-black">10+</div>
@@ -330,7 +329,7 @@ export default function LandingPage() {
                             ].map((benefit, index) => (
                                 <div
                                     key={benefit.title}
-                                    className="p-6 bg-gray-100 rounded-xl transition-all hover:bg-gradient-to-br hover:from-gray-800 hover:to-black hover:text-white hover:-translate-y-2 hover:shadow-xl group animate-in fade-in zoom-in duration-600"
+                                    className="p-6 bg-gray-100 rounded-xl transition-all hover:bg-gradient-to-br hover:from-orange-500 hover:to-red-600 hover:text-white hover:-translate-y-2 hover:shadow-xl group animate-in fade-in zoom-in duration-600"
                                     style={{ animationDelay: `${index * 100}ms` }}
                                 >
                                     <div className="text-4xl mb-4">{benefit.icon}</div>
@@ -340,7 +339,7 @@ export default function LandingPage() {
                             ))}
                         </div>
 
-                        <div className="bg-gradient-to-br from-gray-800 to-black p-8 rounded-2xl shadow-2xl text-white">
+                        <div className="bg-gradient-to-br from-orange-600 to-red-700 p-8 rounded-2xl shadow-2xl text-white">
                             <h3 className="text-3xl font-serif font-bold mb-6">Express Your Interest</h3>
                             <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Interest submitted!'); }}>
                                 <input
@@ -443,7 +442,7 @@ export default function LandingPage() {
                                     </div>
                                 </div>
 
-                                <button type="submit" className="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all hover:-translate-y-1 hover:shadow-xl">
+                                <button type="submit" className="w-full bg-orange-600 text-white py-4 rounded-lg font-semibold hover:bg-orange-700 transition-all hover:-translate-y-1 hover:shadow-xl">
                                     Place Order
                                 </button>
                             </form>
@@ -473,7 +472,7 @@ export default function LandingPage() {
                                 <h3 className="text-xl font-bold mb-4">🛵 Available on</h3>
                                 <div className="flex gap-3 mb-4">
                                     <div className="bg-black text-white px-4 py-2 rounded-lg font-semibold">Swiggy</div>
-                                    <div className="bg-black text-white px-4 py-2 rounded-lg font-semibold">Zomato</div>
+                                    <div className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold">Zomato</div>
                                 </div>
                                 <p className="text-sm text-gray-600">Order through your favorite food delivery apps</p>
                             </div>
@@ -509,7 +508,7 @@ export default function LandingPage() {
                             ))}
                         </div>
 
-                        <div className="bg-gradient-to-br from-gray-800 to-black p-8 rounded-2xl shadow-2xl text-white">
+                        <div className="bg-gradient-to-br from-orange-600 to-red-700 p-8 rounded-2xl shadow-2xl text-white">
                             <h3 className="text-3xl font-serif font-bold mb-6">Send us a Message</h3>
                             <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Message sent!'); }}>
                                 <input type="text" placeholder="Your Name" required className="w-full px-4 py-3 rounded-lg bg-white/10 border-2 border-white/20 text-white placeholder-white/70 focus:border-white focus:outline-none transition-all" />
@@ -531,7 +530,7 @@ export default function LandingPage() {
                     <div className="grid md:grid-cols-4 gap-8 mb-8">
                         <div>
                             <div className="flex items-center gap-2 font-serif font-bold text-2xl mb-4">
-                                <span className="text-4xl">🍛</span>
+                                <img src="/logo.jpg" alt="OH MY BIRYANI" className="h-10 w-auto invert brightness-0 grayscale-0 mix-blend-screen" />
                                 <span>OH MY BIRYANI</span>
                             </div>
                             <p className="text-gray-400">Authentic Arcot style biryani, crafted with tradition and served with love.</p>
